@@ -1,0 +1,31 @@
+baseURL = 'https://hilltop-astronomy.example.org/'
+locale = 'en-gb'
+title = 'Hilltop Astronomy Club'
+
+[taxonomies]
+  tag = 'tags'
+
+[params]
+  strapline = 'A friendly club for looking up'
+  meetingPlace = 'The Old School Hall, Church Lane'
+  meetingNight = 'the first clear Friday of the month'
+
+[[menu.main]]
+  name = 'Home'
+  url = '/'
+  weight = 1
+
+[[menu.main]]
+  name = 'Observing Notes'
+  url = '/notes/'
+  weight = 2
+
+[[menu.main]]
+  name = 'About'
+  url = '/about/'
+  weight = 3
+
+[[menu.main]]
+  name = 'Tags'
+  url = '/tags/'
+  weight = 4

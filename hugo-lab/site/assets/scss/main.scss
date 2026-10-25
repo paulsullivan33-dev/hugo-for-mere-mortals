@@ -1,0 +1,47 @@
+$sky: #16264a;
+$paper: #f7f4ec;
+$accent: #c98a2d;
+
+body {
+  background: $paper;
+  color: #22222a;
+  font-family: Georgia, serif;
+  margin: 2rem auto;
+  max-width: 42rem;
+  padding: 0 1rem;
+}
+
+header {
+  border-bottom: 3px solid $sky;
+
+  .site-name {
+    font-size: 1.6rem;
+
+    a {
+      color: $sky;
+      text-decoration: none;
+    }
+  }
+
+  nav ul {
+    display: flex;
+    gap: 1rem;
+    list-style: none;
+    padding: 0;
+
+    a {
+      color: $accent;
+    }
+  }
+}
+
+.skynote {
+  background: lighten($sky, 62%);
+  border-left: 4px solid $accent;
+  padding: 0.5rem 1rem;
+}
+
+.meetup {
+  border: 1px dashed $sky;
+  padding: 0.5rem 1rem;
+}

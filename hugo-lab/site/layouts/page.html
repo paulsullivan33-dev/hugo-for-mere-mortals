@@ -1,0 +1,14 @@
+{{ define "main" }}
+<article>
+  <h1>{{ .Title }}</h1>
+  {{ partial "post-meta.html" . }}
+  {{ .Content }}
+  {{ with .Resources.GetMatch "mirror.png" }}
+    {{ $small := .Resize "300x" }}
+    <figure>
+      <img src="{{ $small.RelPermalink }}" width="{{ $small.Width }}" height="{{ $small.Height }}" alt="{{ .Title }}">
+      <figcaption>{{ .Title }} (resized by Hugo from {{ .Width }}px to {{ $small.Width }}px wide)</figcaption>
+    </figure>
+  {{ end }}
+</article>
+{{ end }}

@@ -1,0 +1,9 @@
+{{ define "main" }}
+<h1>Notes tagged “{{ .Data.Term }}”</h1>
+<ul class="post-list">
+  {{ range .Pages.ByDate.Reverse }}
+  <li><a href="{{ .RelPermalink }}">{{ .Title }}</a> — {{ .Date.Format "2 January 2006" }}</li>
+  {{ end }}
+</ul>
+<p><a href="{{ "/tags/" | relURL }}">All tags</a></p>
+{{ end }}

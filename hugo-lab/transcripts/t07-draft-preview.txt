@@ -1,0 +1,4 @@
+$ hugo server --buildDrafts (draft preview)
+/notes/comet-watch/  200
+$ the notes list now includes the draft
+Comet Watch

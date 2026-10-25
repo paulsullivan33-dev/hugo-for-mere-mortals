@@ -1,0 +1,54 @@
+BEFORE: /tags/moon/ rendered by the wrong template (from --templateMetrics)
+          1.53 ms     190.92 µs     280.71 µs      8  _default/taxonomy.html
+  <main>
+    
+<h1>Moon</h1>
+<p>Browse the notes by tag:</p>
+
+$ restructure layouts to the v0.146+ system
+layouts/404.html
+layouts/_partials/footer.html
+layouts/_partials/header.html
+layouts/_partials/post-meta.html
+layouts/_shortcodes/meetup.html
+layouts/_shortcodes/skynote.html
+layouts/baseof.html
+layouts/home.html
+layouts/list.html
+layouts/page.html
+layouts/taxonomy.html
+layouts/term.html
+
+$ hugo --cleanDestinationDir (rebuild)
+
+WARN  deprecated: css.Sass: libsass was deprecated in Hugo v0.153.0 and will be removed in a future release. Use dartsass instead. See https://gohugo.io/functions/css/sass/#dart-sass
+
+                  │ EN 
+──────────────────┼────
+ Pages            │ 27 
+ Paginator pages  │  0 
+ Non-page files   │  1 
+ Static files     │  1 
+ Processed images │  1 
+ Aliases          │  0 
+ Cleaned          │  0 
+
+Total in 88 ms
+
+AFTER: /tags/moon/ main content
+  <main>
+    
+<h1>Notes tagged “moon”</h1>
+<ul class="post-list">
+  
+  <li><a href="/notes/moonwatch-evening/">Moonwatch evening: twelve of us, one flask short</a> — 10 October 2026</li>
+  
+  <li><a href="/notes/first-light-binoculars/">First light: the Moon through borrowed binoculars</a> — 3 October 2026</li>
+  
+</ul>
+<p><a href="/tags/">All tags</a></p>
+
+  </main>
+$ hugo --templateMetrics (taxonomy templates)
+         25.41 ms       3.63 ms       6.75 ms      7  term.html
+          3.06 ms       3.06 ms       3.06 ms      1  taxonomy.html

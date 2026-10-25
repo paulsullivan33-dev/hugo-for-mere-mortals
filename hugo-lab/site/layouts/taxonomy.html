@@ -1,0 +1,9 @@
+{{ define "main" }}
+<h1>{{ .Title }}</h1>
+<p>Browse the notes by tag:</p>
+<ul>
+  {{ range .Data.Terms.Alphabetical }}
+  <li><a href="{{ .Page.RelPermalink }}">{{ .Page.LinkTitle | lower }}</a> ({{ .Count }} {{ if eq .Count 1 }}note{{ else }}notes{{ end }})</li>
+  {{ end }}
+</ul>
+{{ end }}

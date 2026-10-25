@@ -1,0 +1,11 @@
+<header>
+  <p class="site-name"><a href="{{ "/" | relURL }}">{{ .Site.Title }}</a></p>
+  <p class="strapline">{{ .Site.Params.strapline }}</p>
+  <nav>
+    <ul>
+      {{ range .Site.Menus.main }}
+      <li><a href="{{ .URL }}">{{ .Name }}</a></li>
+      {{ end }}
+    </ul>
+  </nav>
+</header>

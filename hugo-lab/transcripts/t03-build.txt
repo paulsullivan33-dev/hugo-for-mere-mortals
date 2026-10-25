@@ -1,0 +1,51 @@
+$ hugo
+Start building sites … 
+hugo v0.168.0-e27a6760c5547237f87d353aebe0580feadb20f4+extended linux/amd64 BuildDate=2026-10-13T16:42:50Z VendorInfo=gohugoio
+
+WARN  deprecated: .Site.LanguageCode was deprecated in Hugo v0.158.0 and will be removed in a future release. Use .Site.Language.Locale instead.
+WARN  deprecated: css.Sass: libsass was deprecated in Hugo v0.153.0 and will be removed in a future release. Use dartsass instead. See https://gohugo.io/functions/css/sass/#dart-sass
+
+                  │ EN 
+──────────────────┼────
+ Pages            │ 27 
+ Paginator pages  │  0 
+ Non-page files   │  1 
+ Static files     │  1 
+ Processed images │  1 
+ Aliases          │  0 
+ Cleaned          │  0 
+
+Total in 379 ms
+
+$ find public -type f | sort
+public/404.html
+public/about/index.html
+public/images/badge.svg
+public/index.html
+public/index.xml
+public/notes/first-light-binoculars/index.html
+public/notes/index.html
+public/notes/index.xml
+public/notes/jupiter-at-opposition/index.html
+public/notes/moonwatch-evening/index.html
+public/notes/telescope-cleaning/index.html
+public/notes/telescope-cleaning/mirror.png
+public/notes/telescope-cleaning/mirror_hu_60c1455a329512f.png
+public/scss/main.css
+public/sitemap.xml
+public/tags/beginners/index.html
+public/tags/beginners/index.xml
+public/tags/binoculars/index.html
+public/tags/binoculars/index.xml
+public/tags/index.html
+public/tags/index.xml
+public/tags/maintenance/index.html
+public/tags/maintenance/index.xml
+public/tags/moon/index.html
+public/tags/moon/index.xml
+public/tags/observing/index.html
+public/tags/observing/index.xml
+public/tags/planets/index.html
+public/tags/planets/index.xml
+public/tags/telescopes/index.html
+public/tags/telescopes/index.xml

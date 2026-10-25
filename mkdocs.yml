@@ -1,0 +1,35 @@
+site_name: Hugo for Mere Mortals
+site_description: A single fast program that turns a folder of Markdown files into a finished website. Installing the extended build, writing content and front matter, hand-rolled templates, tags, the configuration file, Sass and images through the asset pipeline, and publishing the finished folder.
+site_url: https://paulsullivan33-dev.github.io/hugo-for-mere-mortals/
+
+# Guides live at the repo root (nice for GitHub browsing).
+# The deploy workflow copies them into docs/ before building.
+# The lab fixture is a Hugo site of its own; its Markdown content
+# files are repo fixtures, not pages of this guide.
+exclude_docs: |
+  hugo-lab/site/content/*.md
+  hugo-lab/site/content/**/*.md
+  hugo-lab/site/archetypes/*.md
+
+theme:
+  name: material
+
+nav:
+  - Home: index.md
+  - What Hugo Is: what-hugo-is.md
+  - The Moving Parts: the-moving-parts.md
+  - Installing Hugo: installing-hugo.md
+  - Your First Site: your-first-site.md
+  - Content and Front Matter: content-and-front-matter.md
+  - Templates and Layouts: templates-and-layouts.md
+  - Shortcodes: shortcodes.md
+  - Taxonomies: taxonomies.md
+  - Configuration: configuration.md
+  - Assets and Images: assets-and-images.md
+  - Deploying to GitHub Pages: deploying-to-github-pages.md
+  - Recipes: recipes.md
+  - The Neighbours: the-neighbours.md
+  - Limits: limits.md
+  - Troubleshooting: troubleshooting.md
+  - Glossary: glossary.md
+  - Writing Criteria: criteria.md

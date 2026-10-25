@@ -1,0 +1,76 @@
+The lab — one real Hugo, one fictional astronomy club
+================================================================
+
+The lab is Hugo 0.168.0, the extended
+build, downloaded as the official
+release tarball for linux-amd64 from
+the project's GitHub releases and
+verified against the project's own
+checksums file before it ran (SHA-256
+answer: OK; transcript t00). It ran on
+the build machine: an Ubuntu Linux
+sandbox, no display, Hugo called as
+./bin/hugo from a work folder.
+
+The site built on it is the Hilltop
+Astronomy Club — invented whole: the
+club, its hall, its members, and its
+opinions about the Moon are fixtures
+for any reader to reproduce, modelled
+on no real club or person. Its full
+source (content, hand-written layouts,
+config, the lot) is kept at
+hugo-lab/site/; its photograph is a
+640x400 PNG the lab generated (a dark
+field with stars) so the image pipeline
+had something honest to resize.
+
+What the lab did, in order:
+
+  * Scaffolded with `hugo new site`
+    and built immediately, on purpose,
+    to record what an empty site does:
+    warnings about missing layouts, and
+    only XML outputs (t01, t02).
+  * Wrote the config, four pieces of
+    content plus a draft, and hand-made
+    templates — first in the pre-0.146
+    _default layout, because that is
+    what older tutorials teach.
+  * Found, by inspecting a tag page,
+    that every term page was rendered
+    by the taxonomy template and the
+    term template never ran; proved it
+    with --templateMetrics; moved the
+    templates to the current layout
+    (layouts/ root, _partials,
+    _shortcodes) and proved the fix the
+    same way (t90). The guide teaches
+    the current layout throughout.
+  * Built the finished site (27 pages,
+    379 ms cold, 88 ms warm), and took
+    the output apart: sitemap, RSS,
+    shortcode results in the HTML, the
+    Sass product with its variables
+    resolved, the bundle image beside
+    its 300px resized copy (t03, t04).
+  * Served it and asked real questions
+    with curl: all pages 200, an
+    invented address 404, the draft
+    present only under --buildDrafts
+    (t05, t07).
+
+Two deprecations were met on the way
+and are kept in the transcripts rather
+than smoothed over: .Site.LanguageCode
+in an early template (fixed to
+.Site.Language.Locale), and css.Sass's
+libsass warning, which stands in the
+final build and is discussed in
+chapter 10 as the small migration it
+announces.
+
+Nothing was deployed anywhere: the lab
+machine has no public address. Chapter
+11 is the documented pattern, and the
+lab notes and criteria.md both say so.

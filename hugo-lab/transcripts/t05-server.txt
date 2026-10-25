@@ -1,0 +1,31 @@
+$ hugo server (against the restructured layouts)
+Running in Fast Render Mode. For full rebuilds on change: hugo server --disableFastRender
+Web Server is available at http://localhost:1313/ (bind address 127.0.0.1) 
+Press Ctrl+C to stop
+
+$ curl status codes
+/                                        200
+/notes/                                  200
+/notes/jupiter-at-opposition/            200
+/tags/                                   200
+/tags/moon/                              200
+/about/                                  200
+/scss/main.css                           200
+/no-such-page/                           404
+
+$ home page <title>
+<title>Hilltop Astronomy Club</title>
+$ /tags/ lists the terms with counts
+$ /tags/moon/ heading (term template)
+Notes tagged “moon”
+
+NOTE on the t05 transcript: the counts grep in the server pass returned nothing
+because the pattern omitted the </a> between the term name and its count.
+The rendered file itself, checked directly:
+>beginners</a> (1 note)
+>binoculars</a> (1 note)
+>maintenance</a> (1 note)
+>moon</a> (2 notes)
+>observing</a> (2 notes)
+>planets</a> (1 note)
+>telescopes</a> (1 note)

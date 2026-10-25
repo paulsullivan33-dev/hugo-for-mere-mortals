@@ -1,0 +1,31 @@
+$ tar -xzf hugo_extended_0.168.0_linux-amd64.tar.gz (into bin/)
+LICENSE
+README.md
+hugo
+
+$ hugo version
+hugo v0.168.0-e27a6760c5547237f87d353aebe0580feadb20f4+extended linux/amd64 BuildDate=2026-10-13T16:42:50Z VendorInfo=gohugoio
+
+$ hugo new site kettle-club
+Congratulations! Your new Hugo project was created in /home/hatch/workspace/hugo-lab-work/kettle-club.
+
+Just a few more steps...
+
+1. Change the current directory to /home/hatch/workspace/hugo-lab-work/kettle-club.
+2. Create or install a theme:
+   - Create a new theme with the command "hugo new theme <THEMENAME>"
+   - Or, install a theme from https://themes.gohugo.io/
+3. Edit hugo.toml, setting the "theme" property to the theme name.
+4. Create new content with the command "hugo new content <SECTIONNAME>/<FILENAME>.<FORMAT>".
+5. Start the embedded web server with the command "hugo server --buildDrafts".
+
+See documentation at https://gohugo.io/.
+
+$ find kettle-club -type f | sort
+kettle-club/archetypes/default.md
+kettle-club/hugo.toml
+
+$ cat kettle-club/hugo.toml
+baseURL = 'https://example.org/'
+locale = 'en-us'
+title = 'My New Hugo Project'

@@ -1,0 +1,79 @@
+$ hugo (rebuild after fixing the LanguageCode deprecation)
+Start building sites … 
+hugo v0.168.0-e27a6760c5547237f87d353aebe0580feadb20f4+extended linux/amd64 BuildDate=2026-10-13T16:42:50Z VendorInfo=gohugoio
+
+WARN  deprecated: css.Sass: libsass was deprecated in Hugo v0.153.0 and will be removed in a future release. Use dartsass instead. See https://gohugo.io/functions/css/sass/#dart-sass
+
+                  │ EN 
+──────────────────┼────
+ Pages            │ 27 
+ Paginator pages  │  0 
+ Non-page files   │  1 
+ Static files     │  1 
+ Processed images │  1 
+ Aliases          │  0 
+ Cleaned          │  0 
+
+Total in 258 ms
+
+$ grep -o "<loc>[^<]*</loc>" public/sitemap.xml
+<loc>https://hilltop-astronomy.example.org/notes/jupiter-at-opposition/</loc>
+<loc>https://hilltop-astronomy.example.org/notes/</loc>
+<loc>https://hilltop-astronomy.example.org/tags/observing/</loc>
+<loc>https://hilltop-astronomy.example.org/tags/planets/</loc>
+<loc>https://hilltop-astronomy.example.org/tags/</loc>
+<loc>https://hilltop-astronomy.example.org/</loc>
+<loc>https://hilltop-astronomy.example.org/tags/moon/</loc>
+<loc>https://hilltop-astronomy.example.org/notes/moonwatch-evening/</loc>
+<loc>https://hilltop-astronomy.example.org/tags/beginners/</loc>
+<loc>https://hilltop-astronomy.example.org/tags/binoculars/</loc>
+<loc>https://hilltop-astronomy.example.org/notes/first-light-binoculars/</loc>
+<loc>https://hilltop-astronomy.example.org/notes/telescope-cleaning/</loc>
+<loc>https://hilltop-astronomy.example.org/tags/maintenance/</loc>
+<loc>https://hilltop-astronomy.example.org/tags/telescopes/</loc>
+<loc>https://hilltop-astronomy.example.org/about/</loc>
+
+$ head -20 public/index.xml (the RSS feed)
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Welcome to the Hilltop Astronomy Club on Hilltop Astronomy Club</title>
+		<link>https://hilltop-astronomy.example.org/</link>
+		<description>Recent content in Welcome to the Hilltop Astronomy Club on Hilltop Astronomy Club</description>
+		<generator>Hugo</generator>
+		<language>en-gb</language>
+		
+		
+		
+		
+			<lastBuildDate>Sat, 17 Oct 2026 00:00:00 +0000</lastBuildDate>
+		
+			<atom:link href="https://hilltop-astronomy.example.org/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>Jupiter at opposition: four moons in a row</title>
+				<link>https://hilltop-astronomy.example.org/notes/jupiter-at-opposition/</link>
+				<pubDate>Sat, 17 Oct 2026 00:00:00 +0000</pubDate>
+				<guid>https://hilltop-astronomy.example.org/notes/jupiter-at-opposition/</guid>
+
+$ grep -c "skynote" public/notes/first-light-binoculars/index.html (shortcode output present?)
+1
+$ grep -o "Next meeting[^<]*" public/index.html (meetup shortcode on home)
+Next meeting:
+$ ls -la public/notes/telescope-cleaning/ (bundle image + Hugo-resized copy)
+total 12
+drwxrwx--- 1 root root   98 Oct 25 02:18 .
+drwxrwx--- 1 root root  194 Oct 25 02:18 ..
+-rw-rw---- 1 root root 1741 Oct 25 02:18 index.html
+-rw-rw---- 1 root root 2101 Oct 25 02:18 mirror.png
+-rw-rw---- 1 root root 1895 Oct 25 02:18 mirror_hu_60c1455a329512f.png
+$ identify sizes via python
+public/notes/telescope-cleaning/mirror.png 640 x 400 2101 bytes
+public/notes/telescope-cleaning/mirror_hu_60c1455a329512f.png 300 x 188 1895 bytes
+$ grep -E "background|#16264a" public/scss/main.css | head -5 (Sass variables resolved?)
+  background: #f7f4ec;
+  border-bottom: 3px solid #16264a; }
+      color: #16264a;
+  background: #b4c4e9;
+  border: 1px dashed #16264a;
+$ grep -c "\\$" public/scss/main.css (dollar signs left: 0 means fully compiled)
+0

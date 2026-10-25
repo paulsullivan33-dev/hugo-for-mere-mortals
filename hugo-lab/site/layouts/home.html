@@ -1,0 +1,10 @@
+{{ define "main" }}
+<h1>{{ .Title }}</h1>
+{{ .Content }}
+<h2>Latest observing notes</h2>
+<ul class="post-list">
+  {{ range first 3 (where .Site.RegularPages "Section" "notes").ByDate.Reverse }}
+  <li><a href="{{ .RelPermalink }}">{{ .Title }}</a> — {{ .Date.Format "2 January 2006" }}</li>
+  {{ end }}
+</ul>
+{{ end }}

@@ -1,0 +1,28 @@
+$ cat archetypes/default.md
++++
+date = '{{ .Date }}'
+draft = true
+title = '{{ replace .File.ContentBaseName "-" " " | title }}'
++++
+
+$ hugo new content notes/comet-watch.md
+Content "/home/hatch/workspace/hugo-lab-work/hilltop/content/notes/comet-watch.md" created
+$ cat content/notes/comet-watch.md
++++
+date = '2026-10-25T02:18:53Z'
+draft = true
+title = 'Comet Watch'
++++
+
+$ hugo list all
+path,slug,title,date,expiryDate,publishDate,draft,permalink,kind,section
+content/notes/comet-watch.md,,Comet Watch,2026-10-25T02:18:53Z,0001-01-01T00:00:00Z,2026-10-25T02:18:53Z,true,https://hilltop-astronomy.example.org/notes/comet-watch/,page,notes
+content/_index.md,,Welcome to the Hilltop Astronomy Club,2026-10-25T02:18:53Z,0001-01-01T00:00:00Z,2026-10-25T02:18:53Z,false,https://hilltop-astronomy.example.org/,home,
+content/notes/jupiter-at-opposition.md,,Jupiter at opposition: four moons in a row,2026-10-17T00:00:00Z,0001-01-01T00:00:00Z,2026-10-17T00:00:00Z,false,https://hilltop-astronomy.example.org/notes/jupiter-at-opposition/,page,notes
+content/notes/moonwatch-evening.md,,"Moonwatch evening: twelve of us, one flask short",2026-10-10T00:00:00Z,0001-01-01T00:00:00Z,2026-10-10T00:00:00Z,false,https://hilltop-astronomy.example.org/notes/moonwatch-evening/,page,notes
+content/notes/first-light-binoculars.md,,First light: the Moon through borrowed binoculars,2026-10-03T00:00:00Z,0001-01-01T00:00:00Z,2026-10-03T00:00:00Z,false,https://hilltop-astronomy.example.org/notes/first-light-binoculars/,page,notes
+content/notes/telescope-cleaning/index.md,,Cleaning the club telescope (less often than you think),2026-09-26T00:00:00Z,0001-01-01T00:00:00Z,2026-09-26T00:00:00Z,false,https://hilltop-astronomy.example.org/notes/telescope-cleaning/,page,notes
+content/about.md,,About the club,2026-09-12T00:00:00Z,0001-01-01T00:00:00Z,2026-09-12T00:00:00Z,false,https://hilltop-astronomy.example.org/about/,page,
+$ hugo list drafts
+path,slug,title,date,expiryDate,publishDate,draft,permalink,kind,section
+content/notes/comet-watch.md,,Comet Watch,2026-10-25T02:18:53Z,0001-01-01T00:00:00Z,2026-10-25T02:18:53Z,true,https://hilltop-astronomy.example.org/notes/comet-watch/,page,notes

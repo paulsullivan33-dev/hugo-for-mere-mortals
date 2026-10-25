@@ -1,0 +1,25 @@
+$ find . -type f | sort (final site source)
+./archetypes/default.md
+./assets/scss/main.scss
+./content/_index.md
+./content/about.md
+./content/notes/comet-watch.md
+./content/notes/first-light-binoculars.md
+./content/notes/jupiter-at-opposition.md
+./content/notes/moonwatch-evening.md
+./content/notes/telescope-cleaning/index.md
+./content/notes/telescope-cleaning/mirror.png
+./hugo.toml
+./layouts/404.html
+./layouts/_partials/footer.html
+./layouts/_partials/header.html
+./layouts/_partials/post-meta.html
+./layouts/_shortcodes/meetup.html
+./layouts/_shortcodes/skynote.html
+./layouts/baseof.html
+./layouts/home.html
+./layouts/list.html
+./layouts/page.html
+./layouts/taxonomy.html
+./layouts/term.html
+./static/images/badge.svg
